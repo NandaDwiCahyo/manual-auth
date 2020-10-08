@@ -20,3 +20,8 @@ Route::get('/home', function ()
 	return view('home');
 })->middleware('auth');
 Route::get('/logout', 'AuthController@logout')->middleware('auth');
+
+Route::get('/about', function ()
+{
+	return "About Page";
+});
