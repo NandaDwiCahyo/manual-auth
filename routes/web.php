@@ -11,17 +11,15 @@
 |
 */
 
-Route::get('/register', 'AuthController@getRegister')->middleware('guest');
-Route::post('/postRegister', 'AuthController@postRegister')->middleware('guest');
-Route::get('/login', 'AuthController@getLogin')->middleware('guest')->name('login');
-Route::post('/postLogin', 'AuthController@postLogin')->middleware('guest');
-Route::get('/home', function ()
-{
-	return view('home');
-})->middleware('auth');
-Route::get('/logout', 'AuthController@logout')->middleware('auth');
 
-Route::get('/about', function ()
-{
-	return "About Page";
+Route::get('/', function () {
+	return view('welcome');
+});
+
+Route::get('/login', function () {
+	return view('login');
+});
+
+Route::get('/register', function () {
+	return view('register');
 });

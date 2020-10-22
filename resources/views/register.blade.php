@@ -7,6 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
   <meta name="generator" content="Jekyll v3.8.6">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/220px-Laravel.svg.png">
 
   <title>Signin Template · Bootstrap</title>
 
@@ -16,6 +17,11 @@
   <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
   <style>
+
+    body {
+      background-color: #072540;
+      color: #fff;
+    }
 
     .bd-placeholder-img {
       font-size: 1.125rem;
@@ -39,7 +45,7 @@
 
 </head>
 
-<body class="text-center">
+<body class="text-center" style="background-color: #072540">
 
   <form class="form-signin" method="post" action="/postRegister">
 
@@ -50,7 +56,7 @@
     <h1 class="h3 mb-3 font-weight-normal">Register {{config('app.name')}}</h1>
 
     <label for="inputEmail" class="sr-only">Name</label>
-    <input type="text" name="name" id="inputEmail" class="form-control @error('name') is-invalid @enderror" placeholder="Please insert your name" value="{{old('name')}}" required autofocus>
+    <input type="text" name="name" id="inputEmail" class="form-control @error('name') is-invalid @enderror" placeholder="Please insert your name" value="{{old('name')}}" required autofocus style="margin-bottom: 10px;">
     @error ('name')
     <div class="invalid-feedback">{{$message}}</div>
     @enderror
